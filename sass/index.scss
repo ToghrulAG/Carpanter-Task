@@ -1,0 +1,27 @@
+// variables & functions
+@import "variables";
+@import "functions";
+
+
+// base & layout
+@import "base";
+@import "nav";
+@import "grid";
+@import "slider";
+@import "services";
+@import "aboutUs";
+@import "ourServices";
+// colors
+@import "colors";
+
+// components (buttons, cards, etc.)
+@import "components/card";
+@import "components/button";
+@import "./header";
+
+// utilities (helpers, modifiers, margin, padding, etc.)
+@import "utilities";
+
+
+
+

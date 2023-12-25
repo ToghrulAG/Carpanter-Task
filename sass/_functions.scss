@@ -1,0 +1,8 @@
+// @function light-complement($color) {
+//   $complement: complement($color);
+//   //complement -> fonksiyonu, bir renk değerinin tamamlayıcı (komplementer) rengini almak için kullanılır. Komplementer renk, renk çarkında orijinal rengin tam karşısında yer alan renktir.
+
+//   $light-complement: lighten($complement, 30%);
+//   // lighten -> fonksiyonu, belirli bir renk değerini daha açık hale getirmek için kullanılır. Bu fonksiyon, bir renk ve bir yüzde değeri alır ve bu renki belirtilen yüzde oranında açar.
+//   @return $light-complement;
+// }

@@ -1,0 +1,71 @@
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+
+.responsive-content {
+  @include md {
+    background-color: yellowgreen;
+  }
+
+  @include xl {
+    background-color: rgb(45, 3, 230);
+  }
+}
+
+// @mixin custom-btn {
+//   text-decoration: none;
+//   cursor: pointer;
+//   display: inline-block;
+//   border: 0;
+//   @content;
+//   padding: 0.75rem 1.5rem;
+//   border-radius: 10px;
+//   color: white;
+// }
+
+// .custom-btn {
+//   @include custom-btn {
+//     background-color: #dc3545;
+//   }
+// }

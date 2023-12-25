@@ -1,0 +1,63 @@
+@import "mixins";
+
+.ourServices {
+    width: 120vh;
+    width: 100%;
+    background-color: aqua;
+    @include defaultFlexCenterCol;
+    gap: 50px;
+    padding-top: 50px;
+
+    .ourServicesTitle {}
+
+    .ourServicesContainer {
+        @include defaultFlexCenter;
+
+        width: 100%;
+
+        .cardsGr1 {
+            gap: 20px;
+
+            display: flex;
+            width: 90%;
+            background-color: green;
+
+            .card {
+                width: 33.3%;
+                background-color: rgb(61, 61, 61);
+
+                .cardImg {
+                    height: 70%;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .cardContent {
+                    @include defaultFlexBetweenCol;
+                    text-align: center;
+                    height: 30%;
+                    padding-top: 20px;
+
+                    h4 {}
+
+                    p {}
+
+                    .cardReadMore {
+                        a {
+                            text-decoration: none;
+                        }
+
+
+
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

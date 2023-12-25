@@ -1,0 +1,43 @@
+// light
+// .text-light-$key
+// .bg-light-$key
+
+// dark
+// .text-$key
+// .bg-$key
+
+@each $key, $value in $colors {
+  //   @debug "key: #{$key}, value: #{$value}";
+  .text-#{$key} {
+    color: $value;
+  }
+
+  .bg-#{$key} {
+    background-color: $value;
+  }
+
+  // light variations
+  @for $i from 1 through 9 {
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $value, $i * 10);
+      padding: 0.5rem;
+    }
+    .bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $value, $i * 10); 
+    }
+
+    // @debug "<span class='bg-#{$key}-light-#{$i} text-dark'>text-#{$key}-dark-#{$i}</span>";
+  }
+
+  // dark variations
+  @for $i from 1 through 9 {
+    .text-#{$key}-dark-#{$i} {
+      color: mix(rgb(48, 48, 48), $value, $i * 10); 
+    }
+    .bg-#{$key}-dark-#{$i} {
+      background-color: mix(rgb(448, 48, 48), $value, $i * 10); 
+    }
+
+    // @debug "<span class='bg-#{$key}-dark-#{$i} text-white'>text-#{$key}-dark-#{$i}</span>";
+  }
+}

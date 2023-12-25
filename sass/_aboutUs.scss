@@ -1,0 +1,72 @@
+@import "mixins";
+
+.aboutUs {
+    padding-top: 50px;
+    background-color: map-get($map: $colors, $key: "yellow");
+    @include defaultFlexStart;
+    width: 100%;
+    height: 70vh;
+    .aboutPoster {
+        width: 50%;
+        height: 63vh;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .aboutStats {
+        padding-left: 50px;
+        h1 {
+            font-size: 3rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        .explore {
+            padding-top: 30px;
+            .explore-Btn {
+                padding: 15px 25px 15px 25px;
+                background-color: map-get($map: $colors, $key: "downOrange" );
+                color: white;
+                border: none;
+            }
+             
+        }
+        .stats {
+            
+            @include defaultFlexStart;
+            gap: 50px;
+            padding-top: 30px;
+            width: 60%;
+            .happyClient {
+                @include defaultFlexBetween;
+                gap: 10px;
+                
+                i {
+                    font-size: 40px;
+
+                }
+                // .statCounts1 {
+                    
+
+                // }
+            }
+            .projectsDone {
+                @include defaultFlexBetween;
+                gap: 10px;
+
+                i {
+                    font-size: 40px;
+                }
+                
+                // .statCounts2 {
+
+                // }
+            }
+            
+        }
+
+
+
+    }
+}

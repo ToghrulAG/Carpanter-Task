@@ -1,0 +1,34 @@
+@import "mixins";
+.services {
+    width: 100%;
+    @include defaultFlexCenter;
+    gap: 30px;
+    padding-top: 50px;
+    background-color: red;
+    .service {
+        width: 20%;
+        height: 32vh;
+     
+        .serviceTitle {
+            @include defaultFlexBetween;
+            h1 {
+                font-size: 5rem;
+                opacity: 0.1;
+            }
+            i {
+                font-size: 70px
+
+            }
+            
+
+        }
+        .serviceDescp {
+            @include defaultFlexStart;
+            h5 {
+                font-size: 1.25rem;
+
+            }
+
+        }
+    }
+}

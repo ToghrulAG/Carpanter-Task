@@ -1,0 +1,46 @@
+@mixin btn($bg-color: #fff, $color: white, $border: 0) {
+  background-color: $bg-color;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: $border;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius;
+  color: $color;
+}
+
+@each $key, $value in $colors {
+  @if ($value != "white") {
+    .btn-#{$key} {
+      @include btn(
+        $bg-color: $value,
+        $color: map-get($map: $btn-hover-colors, $key: $key)
+      );
+    }
+
+    .btn-outline-#{$key} {
+      @include btn(
+        $border: $base-border-thickness solid $value,
+        $color: $value
+      );
+      &:hover {
+        color: map-get($map: $btn-hover-colors, $key: $key);
+        background-color: $value;
+      }
+
+      &::after {
+        content: "btn-outline-" + unquote("#{$key}");
+      }
+    }
+
+    .btn-complement-#{$key} {
+      @include btn($color: black, $bg-color: light-complement(red));
+      &:hover {
+        color: $value;
+        background-color: light-complement(aqua);
+      }
+    }
+
+    // @debug "<button class='btn-complement-#{$key}'>#{$key}</button>";
+  }
+}
