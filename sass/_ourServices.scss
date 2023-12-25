@@ -3,7 +3,7 @@
 .ourServices {
     width: 120vh;
     width: 100%;
-    background-color: aqua;
+
     @include defaultFlexCenterCol;
     gap: 50px;
     padding-top: 50px;
@@ -20,11 +20,10 @@
 
             display: flex;
             width: 90%;
-            background-color: green;
 
             .card {
                 width: 33.3%;
-                background-color: rgb(61, 61, 61);
+    
 
                 .cardImg {
                     height: 70%;
